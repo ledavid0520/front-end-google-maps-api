@@ -1,0 +1,51 @@
+.centered {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: left;
+}
+
+div input {
+border-radius: 5px;
+}
+
+input[type= button] {
+background-color: DodgerBlue;
+border: none;
+color: white;
+padding: 6px 16px;
+text-align: center;
+font-size: 17px;
+cursor: pointer;
+border-radius: 12px;
+min-width: 130px;
+}
+
+.splitLeft {
+height: 100%;
+width: 20%;
+position: fixed;
+z-index: 1;
+top: 0;
+overflow-x: hidden;
+padding-top: 20px;
+}
+
+.splitRight {
+height: 100%;
+width: 80%;
+position: fixed;
+z-index: 1;
+top: 0;
+overflow-x: hidden;
+padding-top: 20px;
+}
+
+.left {
+left: 0;
+}
+
+.right {
+right: 0;
+}

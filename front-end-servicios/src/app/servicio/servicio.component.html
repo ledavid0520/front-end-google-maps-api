@@ -1,0 +1,22 @@
+<div>
+
+    <div class="splitLeft left">
+        <div class="centered">
+            <app-service-data (completedEmit)="dataCompleted($event)"></app-service-data>           
+        </div>
+    </div>
+
+    <div class="splitRight right">
+        <div class="centered">
+            <div *ngIf="showMap">
+                <app-service-map [serviceInformation]="serviceInformation"></app-service-map>
+            </div>
+
+            <div *ngIf="!showMap">
+                Bienvenido! Por favor complete la informaion del lado izquierdo para comenzar
+            </div>
+
+        </div>
+    </div>
+
+</div>

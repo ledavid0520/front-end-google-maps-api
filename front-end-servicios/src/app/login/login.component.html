@@ -1,0 +1,17 @@
+<div class="centered">
+    <div>
+        <label for="emailForm">E-mail <a class="itemRequerido"><span>*</span></a></label>
+        <br>
+        <input id="emailForm" type="text" [(ngModel)]="userInfo.name">
+    </div>
+
+    <div>
+        <label for="pwForm">Password <a class="itemRequerido"><span>*</span></a></label>
+        <br>
+        <input id="pwForm" type="password" [(ngModel)]="userInfo.password">
+    </div>
+
+    <div >
+        <input type="button" value="Ingresar" (click)="authenticate()">
+    </div>
+</div>

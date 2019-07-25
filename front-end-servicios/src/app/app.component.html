@@ -1,0 +1,25 @@
+<div oncontextmenu="return false;" class="appBody">
+
+  <header>
+
+      <div class="logoHeader">
+          <a title="Tittle">
+              <img src="./assets/images/logo.png" />
+          </a>
+      </div>
+
+  </header>
+
+  <div>
+      <nav>
+          <app-menu></app-menu>
+      </nav>
+  </div>
+
+  <div class="screenArea">
+      {{innerWidth}}
+      <router-outlet></router-outlet>
+  </div>
+</div>
+
+<footer></footer>

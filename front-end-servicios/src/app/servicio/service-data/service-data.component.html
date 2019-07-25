@@ -1,0 +1,17 @@
+<div>
+    <label for="origenForm">Direcciòn Origen<a class="itemRequerido"><span>*</span></a></label>
+    <br>
+    <input id="origenForm" type="text" [(ngModel)]="service.origen" (blur)="validateToOpenMap()">
+</div>
+
+<div>
+    <label for="destinoForm">Direcciòn Destino<a class="itemRequerido"><span>*</span></a></label>
+    <br>
+    <input id="destinoForm" type="text" [(ngModel)]="service.destino" (blur)="validateToOpenMap()">
+</div>
+
+<div>
+    <label for="descripcionForm">Descripcion</label>
+    <br>
+    <input id="descripcionForm" type="text" [(ngModel)]="service.descripcion">
+</div>
