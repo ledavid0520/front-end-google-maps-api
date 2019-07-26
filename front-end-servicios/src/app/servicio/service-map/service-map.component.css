@@ -2,3 +2,16 @@ agm-map {
 height: 300px;
 width: 500px;
 }
+
+.modalNotify {
+	padding: 20px;
+	border-radius: 6px;
+	background: #F3F9FC;
+	color: #6885A4;
+	z-index: 999999999;
+	border-top: 1px solid #FFF;
+	border-left: 1px solid #FFF;
+	box-shadow: 1px 1px 1px 0 rgba(141, 180, 203, 1), 0 6px 12px 0 rgba(0, 0, 0, 0.5);
+	animation-name: animGenie;
+	animation-duration: .2s
+}

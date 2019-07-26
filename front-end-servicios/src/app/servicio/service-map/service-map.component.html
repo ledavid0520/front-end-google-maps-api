@@ -2,6 +2,12 @@
 
 <!-- this creates a google map on the page with the given lat/lng from -->
 <!-- the component as the initial center of the map: -->
-<agm-map [latitude]="latOrigen" [longitude]="lngOrigen">
-    <agm-marker [latitude]="latOrigen" [longitude]="lngOrigen"></agm-marker>
+<agm-map [latitude]="latOrigen" [longitude]="lngOrigen" [zoom]="zoom">
+    <agm-marker [latitude]="latOrigen" [longitude]="lngOrigen" [markerDraggable]="true" [label]="'A'"></agm-marker>
+    <agm-marker [latitude]="latDestino" [longitude]="lngDestino" [markerDraggable]="true" [label]="'B'">
+    </agm-marker>
 </agm-map>
+
+<div class="modalNotify">
+    La distancia entre los puntos elegidos es de: {{distance}} KM.
+</div>
