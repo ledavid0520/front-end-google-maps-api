@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
-import { ServicioComponent } from './servicio/servicio.component';
+import { ServicioComponent } from './components/servicio/servicio.component';
 
 
 const routes: Routes = [
@@ -11,7 +11,8 @@ const routes: Routes = [
   },
   {
     path: 'servicio',
-    component: ServicioComponent
+    component: ServicioComponent,
+    // canActivate: [AuthenticationGuard]
   },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
 ];

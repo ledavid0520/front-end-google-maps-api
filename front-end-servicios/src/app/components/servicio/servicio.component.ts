@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Service } from '../model/service.model';
+import { Service } from 'src/app/model/service.model';
 
 @Component({
   selector: 'app-servicio',
@@ -16,7 +16,7 @@ export class ServicioComponent implements OnInit {
   ngOnInit() {
   }
 
-  dataCompleted(e){
+  dataCompleted(e) {
     this.showMap = true;
     this.serviceInformation = e;
   }
