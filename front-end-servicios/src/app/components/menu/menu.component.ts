@@ -22,8 +22,8 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
   }
 
-  openView(menu){
-    this.router.navigate(menu);
+  openView(menu) {
+    this.router.navigate([menu]);
   }
 
 }

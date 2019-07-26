@@ -11,6 +11,7 @@ import { AgmDirectionModule } from 'agm-direction';
 import { ServicioComponent } from './components/servicio/servicio.component';
 import { ServiceDataComponent } from './components/servicio/service-data/service-data.component';
 import { ServiceMapComponent } from './components/servicio/service-map/service-map.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ServiceMapComponent } from './components/servicio/service-map/service-m
     ServicioComponent,
     MenuComponent,
     ServiceDataComponent,
-    ServiceMapComponent
+    ServiceMapComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

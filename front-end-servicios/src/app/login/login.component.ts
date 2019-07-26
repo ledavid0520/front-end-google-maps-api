@@ -18,8 +18,9 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  authenticate(){
-    if(this.userInfo.name && this.userInfo.password){
+  authenticate() {
+    if (this.userInfo.name && this.userInfo.password) {
+      sessionStorage.setItem('LOGGED', this.userInfo.name);
       this.router.navigate(['/servicio']);
     }
   }
