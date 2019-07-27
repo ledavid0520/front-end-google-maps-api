@@ -4,6 +4,8 @@ top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
 text-align: left;
+min-width: 270px;
+max-width: 270px;
 }
 
 div input {
@@ -20,4 +22,32 @@ font-size: 17px;
 cursor: pointer;
 border-radius: 12px;
 min-width: 130px;
+}
+
+input.disabledInput {
+    background-color: lightgray;
+    color: dimgray;
+    border-color: dimgray
+}
+
+.inline {
+    display: inline;
+}
+
+.inline input {
+    border-radius: 5px;
+    margin: 10px 5px 0 0;
+}
+
+input.signUp {
+    background-color: orange;
+}
+
+input.returnLogin {
+    background-color: darkslategray;
+}
+
+input.returnLogin.signUpFull,
+input.signUp.signUpFull {
+    min-width: 270px;;
 }
