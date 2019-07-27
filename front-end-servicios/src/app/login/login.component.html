@@ -2,7 +2,8 @@
     <form [formGroup]="loginForm" (ngSubmit)="saveTodo()">
         <div class="form-group">
             <label for="emailForm">E-mail<a class="itemRequerido"><span>*</span></a></label>
-            <input id="emailForm" type="text" placeholder="E-mail" class="form-control" formControlName="username" />
+            <input id="emailForm" type="text" placeholder="E-mail" class="form-control" formControlName="username"
+                autocomplete="off" spellcheck="off" />
             <span style="color:Red;"
                 *ngIf="loginForm.controls['username'].touched && loginForm.controls['username'].errors?.required">Este
                 campo
@@ -11,7 +12,8 @@
         </div>
         <div class="form-group">
             <label for="pwForm">Password<a class="itemRequerido"><span>*</span></a></label>
-            <input id="pwForm" type="text" placeholder="Password" class="form-control" formControlName="password" />
+            <input id="pwForm" type="password" placeholder="Password" class="form-control" formControlName="password"
+                autocomplete="off" spellcheck="off" />
             <span style="color:Red;"
                 *ngIf="loginForm.controls['password'].touched && loginForm.controls['password'].errors?.required">Este
                 campo

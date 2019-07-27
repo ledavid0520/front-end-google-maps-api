@@ -37,7 +37,7 @@ import { UserService } from './servicios/user.service';
     AngularFirestoreModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAPQN85Z3E5MRoRwX69Rev_kCfHUFcFoVI',
-      libraries: ['geometry']
+      libraries: ['geometry', 'places']
     }),
     AgmDirectionModule
   ],

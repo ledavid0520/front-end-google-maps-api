@@ -2,7 +2,7 @@
 
     <div class="splitLeft left">
         <div class="centered">
-            <app-service-data (completedEmit)="dataCompleted($event)"></app-service-data>           
+            <app-service-data (completedEmit)="dataCompleted($event)"></app-service-data>
         </div>
     </div>
 
@@ -13,7 +13,9 @@
             </div>
 
             <div *ngIf="!showMap">
-                Bienvenido! Por favor complete la informaion del lado izquierdo para comenzar
+                <h2> Bienvenido!</h2>
+                <h3>Por favor complete la informacion del lado izquierdo para comenzar</h3>
+                <h3>Inicialmente se carga el mapa con los datos entre la ubicacion actual y la ciudad de Tunja</h3>
             </div>
 
         </div>

@@ -1,12 +1,23 @@
-<h3>{{ title }}</h3>
+<h3>{{ title }} {{ titleDescription }}</h3>
 
-<!-- this creates a google map on the page with the given lat/lng from -->
-<!-- the component as the initial center of the map: -->
-<agm-map [latitude]="latOrigen" [longitude]="lngOrigen" [zoom]="zoom">
-    <agm-marker [latitude]="latOrigen" [longitude]="lngOrigen" [markerDraggable]="true" [label]="'A'"></agm-marker>
-    <agm-marker [latitude]="latDestino" [longitude]="lngDestino" [markerDraggable]="true" [label]="'B'">
-    </agm-marker>
-</agm-map>
+<div class="centered">
+
+    <div class="form-group">
+        <label for="place">Dirección Origen<a class="itemRequerido"><span>*</span></a></label>
+        <input id="place" type="text" placeholder="Dirección Origen" #search [formControl]="searchControlOrigin"
+            autocomplete="off" spellcheck="off" />
+
+        <label for="place">Dirección Destino<a class="itemRequerido"><span>*</span></a></label>
+        <input id="place" type="text" placeholder="Direcciòn Destino" #search [formControl]="searchControlDestination"
+            autocomplete="off" spellcheck="off" />
+    </div>
+
+    <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
+        <agm-marker *ngFor="let latlng of latlongs; let i=index;" [latitude]="latlng.latitude"
+            [longitude]="latlng.longitude" [markerDraggable]="true" [label]="i+1+''"></agm-marker>
+    </agm-map>
+
+</div>
 
 <div class="modalNotify">
     La distancia entre los puntos elegidos es de: {{distance}} KM.
