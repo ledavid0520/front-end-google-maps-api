@@ -36,7 +36,7 @@ import { UserService } from './servicios/user.service';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyAPQN85Z3E5MRoRwX69Rev_kCfHUFcFoVI',
+      apiKey: 'YOUR KEY',
       libraries: ['geometry', 'places']
     }),
     AgmDirectionModule

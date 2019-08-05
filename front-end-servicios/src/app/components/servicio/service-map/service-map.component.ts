@@ -17,6 +17,9 @@ export class ServiceMapComponent implements OnInit, OnChanges {
   @ViewChild('search', { static: false })
   private elementRef: ElementRef;
 
+  @ViewChild('searchDestination', { static: false })
+  private elementRefDestination: ElementRef;
+
   title = 'Detalles Servicio';
   titleDescription = 'Detalles Servicio';
 
@@ -52,9 +55,10 @@ export class ServiceMapComponent implements OnInit, OnChanges {
     this.setCurrentLocation();
 
     this.mapsAPILoader.load().then(() => {
-      const autocomplete = new google.maps.places.Autocomplete(this.elementRef.nativeElement, {
-        types: []
-      });
+      const autocomplete = new google.maps.places.Autocomplete(
+        this.elementRef.nativeElement, {
+          types: []
+        });
       autocomplete.addListener('place_changed', () => {
         this.ngZone.run(() => {
           const place: google.maps.places.PlaceResult = autocomplete.getPlace();

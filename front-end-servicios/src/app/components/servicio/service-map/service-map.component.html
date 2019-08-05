@@ -4,12 +4,12 @@
 
     <div class="form-group">
         <label for="place">Dirección Origen<a class="itemRequerido"><span>*</span></a></label>
-        <input id="place" type="text" placeholder="Dirección Origen" #search [formControl]="searchControlOrigin"
-            autocomplete="off" spellcheck="off" />
+        <input id="place" type="text" #search [formControl]="searchControlOrigin" placeholder="Dirección Origen"
+            autocomplete="off" autocapitalize="off" spellcheck="off" />
 
-        <label for="place">Dirección Destino<a class="itemRequerido"><span>*</span></a></label>
-        <input id="place" type="text" placeholder="Direcciòn Destino" #search [formControl]="searchControlDestination"
-            autocomplete="off" spellcheck="off" />
+        <!-- <label for="destination">Dirección Destino<a class="itemRequerido"><span>*</span></a></label>
+        <input id="destination" type="text" #searchDestination [formControl]="searchControlDestination"
+            placeholder="Direcciòn Destino" autocomplete="off" spellcheck="off" /> -->
     </div>
 
     <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
